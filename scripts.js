@@ -1,6 +1,6 @@
 // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
-//const octokit = new Octokit();
-var client = new GitHubClient(new ProductHeaderValue("Find-Github-Repos"));
+const octokit = new Octokit();
+//var client = new GitHubClient(new ProductHeaderValue("Find-Github-Repos"));
 
 
 //response.name to get name of the repos
