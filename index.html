@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <!--
     Description
+    Requirements:
+
+    The user must be able to search for a GitHub user handle.
+    The search must trigger a call to GitHub's API.
+    The repos associated with that handle must be displayed on the page.
+        You must display the repo name and link to the repo URL.
+    The user must be able to make multiple searches and see only the results for the current search.
+
 -->
 
 <html>
@@ -9,9 +17,19 @@
         <meta name="viewport" content="width=device-width">
         <title>Site Name</title> <!--browser window title text-->
         <link href="main.css" rel="stylesheet" type="text/css" />
+        <script type="module">
+            console.log("importing octokit");
+            import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
+        </script>
     </head>
     <body>
         <main>
+            <form id="form">
+                <label for="user">GitHub user</label>
+                <input type="text" id="username" name="username">
+                <button type="submit" id="submit-button" name="submit-button">Submit</button>
+            </form>
+            
 
         </main>
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
